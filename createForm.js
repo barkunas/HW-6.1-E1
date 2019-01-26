@@ -4,7 +4,7 @@ function createFrom(formBody){
     form.name = "mainForm"+(indificator++);
     formBody.forEach(createField);
     ///////////////////
-    form.setAttribute('onsubmit','return validateFormSubmit(this)');
+    form.setAttribute('onsubmit','return validateFormSubmit()');
     form.action = 'https://www.onliner.by/'
     ///////////////////
     document.body.appendChild(form);

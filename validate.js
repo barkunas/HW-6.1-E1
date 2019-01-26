@@ -36,21 +36,25 @@ function inputAlert(){
     drawInputAlert(self);    
 };
 function validateFormSubmit(){
+    //console.log(event)
     let count = 0;
-    var elems = document.getElementsByTagName("input");
-    var textarea = document.getElementsByTagName("textarea")
+    var elems = event.srcElement.elements;
+    //var elems = document.getElementsByTagName("input");
+    //var textarea = document.getElementsByTagName("textarea")
     for(i=0;i<elems.length;i++){
         if(validateForm(elems[i])==false){
             drawInputAlert(elems[i])
             count++
         }
     };
+    /*
     for(i=0;i<textarea.length;i++){
         if(validateForm(textarea[i])==false){
             drawInputAlert(textarea[i])
             count++
         }
     };
+    */
     if(!!!count){
         return true
     }else{
